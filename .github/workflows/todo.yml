@@ -1,0 +1,12 @@
+name: todo
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: dtinth/todo-actions@v0.2.0
