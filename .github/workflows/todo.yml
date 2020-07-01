@@ -1,12 +1,21 @@
-name: todo
-on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
-
+name: "Todos"
+on: ["push"]
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: "ubuntu-latest"
     steps:
-    - uses: dtinth/todo-actions@v0.2.0
+      - uses: "actions/checkout@master"
+      - name: "TODO-2-GH-Issue"
+        uses: "jamminroot/todo-2-gh-issue@master"
+        with:
+          TOKEN: ${9b31f500c0f40c6acb74d4163b51890f1438247d}
+          TODO_PATTERN: "(?<=\\/\\/ ?TODO[ :]).+"
+          GH_LABEL: "TODO"
+          TRIM: ",: \""
+          TIMEOUT: 1000
+          LINES_BEFORE: 2
+          LINES_AFTER: 5
+          LABELS_PATTERN: "(?<=\\[).+?(?=\\])"
+          LABELS_REPLACE_PATTERN: "\\[(.+?)\\]"
+          IGNORED_LINES_LENGTH: 255
+        id: "todo"
