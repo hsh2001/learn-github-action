@@ -8,7 +8,7 @@ jobs:
       - name: "TODO-2-GH-Issue"
         uses: "jamminroot/todo-2-gh-issue@master"
         with:
-          TOKEN: "1e867036d635d6a59e5763c82e51ea2206d4c77b"
+          TOKEN: ${{ 1e867036d635d6a59e5763c82e51ea2206d4c77b }}
           TODO_PATTERN: "(?<=\\/\\/ ?TODO[ :]).+"
           TRIM: ",: \""
           TIMEOUT: 1000
