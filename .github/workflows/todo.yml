@@ -10,6 +10,7 @@ jobs:
         with:
           TOKEN: "9b31f500c0f40c6acb74d4163b51890f1438247d"
           TODO_PATTERN: "(?<=\\/\\/ ?TODO[ :]).+"
+          GH_LABEL: "enhancement"
           TRIM: ",: \""
           TIMEOUT: 1000
           LINES_BEFORE: 2
