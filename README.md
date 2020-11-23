@@ -1,3 +1,0 @@
-# learn-github-action
-
-test
